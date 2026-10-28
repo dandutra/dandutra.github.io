@@ -1,0 +1,10 @@
+exclude_path = ["node_modules", ".lighthouseci"]
+
+# LinkedIn answers 999 to bots, so its links can't be checked.
+exclude = ["^https://www\\.linkedin\\.com/"]
+
+# GitHub and some hosts rate-limit CI runners.
+accept = ["200..=299", "429"]
+
+# The README links to the local preview server.
+exclude_loopback = true

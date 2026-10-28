@@ -86,7 +86,7 @@ This is the general resume. Tailored versions for applications live outside this
 
 ## Checks
 
-`npm run check` runs html-validate, `prettier --check`, Lighthouse CI with `budget.json` (the weight budget above), and lychee for links. CI runs the same command on every push and PR.
+`npm run check` runs html-validate, `prettier --check`, `scripts/check-size.mjs` (the weight budget above, on file sizes), Lighthouse CI, and lychee for links. Lighthouse CI fails below an accessibility score of 100. CI runs the same command on every push and PR.
 
 ## Workflow
 
@@ -94,26 +94,26 @@ Each plan step is a branch and a PR. `/review` runs the Standards axis only. Dan
 
 ## Decisions
 
-| Decision | Rejected | Why |
-|---|---|---|
-| One page plus a separate HTML resume page | Single page; per-project pages | Recruiters skim one page. The resume page prints to PDF and links straight from an application. |
-| Hand-maintained HTML for both pages | Build script from one data file; JS rendering from JSON | The overlap is a few lines that change rarely. JS rendering breaks printing, translation and crawlers. |
-| "How I Work" as a section | Project card for agent-workflow | The repo has no tests or CI. It reads as process, and a card would show it twice. |
-| Copy before design | Mock with placeholder text | Text length drives card height and layout. |
-| GoatCounter | No analytics | Shows whether application links get opened. About 3.5 KB, no cookies. |
-| Live link before public source for Casa Escala | Wait for the scrub | The scrub is separate work in another repo and should not block launch. |
-| Phone menu as a `popover` with a blurred backdrop | Horizontal nav row; no menu | A row of six links wraps badly at 390px. `popover` opens without JS, and its links lead to sections of this page or to the resume, which the header also links. |
-| Two Casa Escala screenshots | One screenshot | The copy describes shifts and groups. The calendar shows shifts, and the second shot shows the group ranking. The two together weigh 44 KB. |
-| Text contact links in the resume header | Gmail, GitHub and LinkedIn icons | ATS parsers and the printed PDF read text. Icons also needed an attribution link for the Icons8 licence. |
-| Back-to-top link revealed by CSS scroll-driven animation | Reveal with JS; a link that is always visible | It needs no JS, and where the browser lacks support the link stays visible and still works. |
-| Status line without the school name | "Graduating from Seneca Polytechnic" | The header shows the work first. About and the resume name the school. |
+| Decision                                                 | Rejected                                                | Why                                                                                                                                                             |
+| -------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| One page plus a separate HTML resume page                | Single page; per-project pages                          | Recruiters skim one page. The resume page prints to PDF and links straight from an application.                                                                 |
+| Hand-maintained HTML for both pages                      | Build script from one data file; JS rendering from JSON | The overlap is a few lines that change rarely. JS rendering breaks printing, translation and crawlers.                                                          |
+| "How I Work" as a section                                | Project card for agent-workflow                         | The repo has no tests or CI. It reads as process, and a card would show it twice.                                                                               |
+| Copy before design                                       | Mock with placeholder text                              | Text length drives card height and layout.                                                                                                                      |
+| GoatCounter                                              | No analytics                                            | Shows whether application links get opened. About 3.5 KB, no cookies.                                                                                           |
+| Live link before public source for Casa Escala           | Wait for the scrub                                      | The scrub is separate work in another repo and should not block launch.                                                                                         |
+| Phone menu as a `popover` with a blurred backdrop        | Horizontal nav row; no menu                             | A row of six links wraps badly at 390px. `popover` opens without JS, and its links lead to sections of this page or to the resume, which the header also links. |
+| Two Casa Escala screenshots                              | One screenshot                                          | The copy describes shifts and groups. The calendar shows shifts, and the second shot shows the group ranking. The two together weigh 44 KB.                     |
+| Text contact links in the resume header                  | Gmail, GitHub and LinkedIn icons                        | ATS parsers and the printed PDF read text. Icons also needed an attribution link for the Icons8 licence.                                                        |
+| Back-to-top link revealed by CSS scroll-driven animation | Reveal with JS; a link that is always visible           | It needs no JS, and where the browser lacks support the link stays visible and still works.                                                                     |
+| Status line without the school name                      | "Graduating from Seneca Polytechnic"                    | The header shows the work first. About and the resume name the school.                                                                                          |
 
 ## Plan
 
 Tracked as GitHub Issues on `dandutra/dandutra.github.io`. The repo exists with Pages on from `main`.
 
 1. **Prerequisites (Daniel).** Create a GoatCounter account and site code. Take a signed-in Casa Escala screenshot.
-2. **Tooling.** `package.json` with `npm run check`, `budget.json`, html-validate and prettier configs, lychee config, CI workflow.
+2. **Tooling.** `package.json` with `npm run check`, a page-weight script, html-validate and prettier configs, lychee config, CI workflow.
 3. **Copy draft.** Write all copy in `docs/content-draft.md`: header and status line, both project cards, HOOPP entry, How I Work, About, Contact, full resume. Daniel reviews.
 4. **Design mock.** Claude Design mock of both pages in light and dark, using the approved copy. Daniel approves. Blocked by 3.
 5. **Main page.** `index.html`, `style.css`, theme script and toggle, favicon, meta and Open Graph tags. Blocked by 2 and 4.
