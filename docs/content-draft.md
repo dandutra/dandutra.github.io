@@ -78,7 +78,7 @@ Email · LinkedIn · GitHub
 Full-stack developer · Toronto, Canada
 Email · LinkedIn · GitHub
 
-In print: danieldutra06@gmail.com · linkedin.com/in/daniel-dutra-489718a2 · github.com/dandutra · dandutra.github.io
+_Print preview, not a separate line: the print stylesheet adds each address after its label, as in "Email (danieldutra06@gmail.com) · LinkedIn (linkedin.com/in/daniel-dutra-489718a2) · GitHub (github.com/dandutra)"._
 
 ## Experience
 

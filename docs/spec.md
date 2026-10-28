@@ -11,7 +11,7 @@ Every rule below is checkable in review.
 3. One idea per sentence. Card summaries are three sentences at most.
 4. Dates sit in the same place and use one format: `May 2025 – Dec 2025`.
 5. Page weight stays under budget: `index.html` + CSS + JS under 30 KB, plus two screenshots under 40 KB each.
-6. Nothing needs a click, hover or JS to be read. No `<details>`, tabs or modals. The one exception is the phone section menu: it holds only links to content that is already on the page, and it opens without JS.
+6. Nothing needs a click, hover or JS to be read. No `<details>`, tabs or modals. The one exception is the phone section menu: it holds links to sections of this page plus the Resume link the header already shows, and it opens without JS.
 
 ## Constraints
 
@@ -28,10 +28,10 @@ Every rule below is checkable in review.
 - Colours, light: background `#fefefa`, text `#1b1d1f`, muted `#5a6068`, links `#2c5a8c`, tag fill `#e4e6e9`. Dark: background `#222222`, text `#e8eaed`, muted `#a5abb3`, links `#8db6e3`, tag fill `#2f353c`. Every text colour passes AA on its background; muted text is the lowest at 6.3:1 in light and 6.9:1 in dark.
 - No divider lines between sections; whitespace separates them.
 - Spacing on `index.html`, phone then desktop: 70/56px between blocks, 40/32px above each section heading and 50/40px between projects. Cards, the HOOPP entry and the Experience, How I Work, About and Contact headings have a 28/22px gap below. The Jellyfin card has an extra 30/24px above it.
-- One muted blue accent for links, with no underline. Links inside running text are also weight 600, because their colour alone is under the 3:1 contrast with body text that WCAG 1.4.1 asks for. No icons except the theme toggle, the phone menu button and the back-to-top link. Links are text ("GitHub", "LinkedIn").
+- One muted blue accent for links, with no underline. Links inside running text are also weight 600. WCAG 1.4.1 asks for 3:1 contrast between link and body text, and the link colour alone does not reach it. No icons except the theme toggle, the phone menu button and the back-to-top link. Links are text ("GitHub", "LinkedIn").
 - Back to top: an `<a href="#top">` fixed in a bottom corner, with the arrow from `assets/back-to-top-arrow.svg` inlined with `fill="currentColor"` so it follows the theme, and an `aria-label`. It fades in after the reader scrolls, through `animation-timeline: scroll()` and no JS. Browsers without scroll-driven animations show it all the time.
 - Desktop: a section nav (Projects, Experience, How I Work, About, Contact, Resume) sits in the right margin and stays in view with `position: sticky`. It is 22px with line height 2.5.
-- Phone: a sticky top bar holds "Daniel's portfolio" (the `h1` below already gives the name), the theme toggle and a menu button. The menu is a `popover` element opened by `popovertarget`, so it needs no JS. The browser handles Esc, outside clicks and focus. Its `::backdrop` blurs the page behind the links. Block gaps are 25% larger than on desktop.
+- Phone: a sticky top bar holds "Daniel's portfolio" (the `h1` below already gives the name), the theme toggle and a menu button. The menu is a `popover` element opened by `popovertarget`, so it needs no JS. The browser handles Esc, outside clicks and focus. Its `::backdrop` blurs the page behind the links.
 - Light and dark themes through CSS custom properties. The default follows `prefers-color-scheme`. A two-state toggle overrides it and saves the choice to `localStorage`.
 - A small inline script in `<head>` applies the saved theme before first paint. Without JS the page follows the OS theme and the toggle is hidden.
 - `<meta name="color-scheme" content="light dark">` and a `theme-color` meta per scheme.
@@ -102,7 +102,7 @@ Each plan step is a branch and a PR. `/review` runs the Standards axis only. Dan
 | Copy before design | Mock with placeholder text | Text length drives card height and layout. |
 | GoatCounter | No analytics | Shows whether application links get opened. About 3.5 KB, no cookies. |
 | Live link before public source for Casa Escala | Wait for the scrub | The scrub is separate work in another repo and should not block launch. |
-| Phone menu as a `popover` with a blurred backdrop | Horizontal nav row; no menu | A row of six links wraps badly at 390px. `popover` opens without JS, and every link in it also leads to content already on the page. |
+| Phone menu as a `popover` with a blurred backdrop | Horizontal nav row; no menu | A row of six links wraps badly at 390px. `popover` opens without JS, and its links lead to sections of this page or to the resume, which the header also links. |
 | Two Casa Escala screenshots | One screenshot | The copy describes shifts and groups. The calendar shows shifts, and the second shot shows the group ranking. The two together weigh 44 KB. |
 | Text contact links in the resume header | Gmail, GitHub and LinkedIn icons | ATS parsers and the printed PDF read text. Icons also needed an attribution link for the Icons8 licence. |
 | Back-to-top link revealed by CSS scroll-driven animation | Reveal with JS; a link that is always visible | It needs no JS, and where the browser lacks support the link stays visible and still works. |
