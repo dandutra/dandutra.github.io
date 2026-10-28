@@ -3,19 +3,378 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniel Dutra, full-stack developer</title>
     <meta
       name="description"
-      content="Daniel Dutra, full-stack developer in Toronto."
+      content="Daniel Dutra, full-stack developer in Toronto. Projects, experience and resume."
     />
-    <title>Daniel Dutra</title>
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#fefefa"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#222222"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="canonical" href="https://dandutra.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dandutra.github.io/" />
+    <meta property="og:title" content="Daniel Dutra, full-stack developer" />
+    <meta
+      property="og:description"
+      content="Daniel Dutra, full-stack developer in Toronto. Projects, experience and resume."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232c5a8c'/%3E%3Ctext x='16' y='21.5' font-family='Helvetica,Arial,sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='%23fefefa'%3EDD%3C/text%3E%3C/svg%3E"
+    />
+    <script>
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.dataset.theme = saved;
+        }
+      } catch {
+        // Storage can be blocked; the page then follows the OS theme.
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="site.js" defer></script>
   </head>
   <body>
-    <main>
-      <h1 translate="no">Daniel Dutra</h1>
-      <p>
-        This portfolio is being built. Meanwhile, see
-        <a href="https://github.com/dandutra">GitHub</a>.
-      </p>
-    </main>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="top-bar">
+      <span class="top-bar-title"
+        ><span translate="no">Daniel</span>’s portfolio</span
+      >
+      <div class="top-bar-buttons">
+        <button
+          type="button"
+          class="icon-btn theme-toggle"
+          aria-label="Dark theme"
+          aria-pressed="false"
+          hidden
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="icon-btn"
+          aria-label="Menu"
+          popovertarget="site-menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="site-menu" popover>
+        <button
+          type="button"
+          class="icon-btn"
+          aria-label="Close menu"
+          popovertarget="site-menu"
+          popovertargetaction="hide"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M6 6l12 12" />
+            <path d="M18 6L6 18" />
+          </svg>
+        </button>
+        <nav aria-label="Section menu">
+          <ul class="menu-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#how">How I Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="resume-link" href="resume.html">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="content">
+        <header class="site-header">
+          <div class="title-row">
+            <h1 translate="no">Daniel Dutra</h1>
+            <button
+              type="button"
+              class="icon-btn theme-toggle"
+              aria-label="Dark theme"
+              aria-pressed="false"
+              hidden
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </button>
+          </div>
+          <p class="headline">Full-stack developer · Toronto, Canada</p>
+          <p class="status">
+            Graduating in December 2026. Open to full-stack and back-end roles.
+          </p>
+          <nav class="link-row" aria-label="Contact">
+            <a href="resume.html">Resume</a>
+            <a href="https://github.com/dandutra">GitHub</a>
+            <a href="https://www.linkedin.com/in/daniel-dutra-489718a2/"
+              >LinkedIn</a
+            >
+            <a href="mailto:danieldutra06@gmail.com">Email</a>
+          </nav>
+        </header>
+
+        <main id="main">
+          <section id="projects-section" aria-labelledby="projects">
+            <h2 id="projects">Projects</h2>
+
+            <article class="card">
+              <div>
+                <h3 translate="no">Casa Escala</h3>
+                <p class="subtitle">
+                  Shift-rotation scheduler for offshore crews
+                </p>
+              </div>
+              <p class="prose">
+                Casa Escala finds and ranks the dates that work best for a group
+                to meet, based on everyone’s offshore work rotations. It is a Go
+                monolith with server-rendered pages, SQLite with streaming
+                backups, and Google or email sign-in. It has 92 users as of
+                October 2026, and about 480 tests run in CI against a real
+                database.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Go</li>
+                <li>SQLite</li>
+                <li>htmx</li>
+                <li>HTML/CSS/JS</li>
+                <li>OAuth 2.0</li>
+                <li>AWS SES</li>
+                <li>Caddy</li>
+                <li>systemd</li>
+                <li>Litestream</li>
+                <li>GitHub Actions</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://casaescala.me">Live site</a>
+              </div>
+              <p class="note">
+                UI in Brazilian Portuguese, built for Brazilian offshore crews.
+              </p>
+              <div class="screenshots">
+                <img
+                  src="assets/casa-escala.webp"
+                  alt="Casa Escala on a phone: the October 2026 calendar, with offshore days in red and days at home in green."
+                  width="600"
+                  height="630"
+                  loading="lazy"
+                />
+                <img
+                  src="assets/casa-escala-groups.webp"
+                  alt="Casa Escala on a phone: the best days for a group to meet, led by Friday 30/10 with all six members available."
+                  width="600"
+                  height="630"
+                  loading="lazy"
+                />
+              </div>
+            </article>
+
+            <article class="card">
+              <div>
+                <h3><span translate="no">Jellyfin</span> Home Server</h3>
+                <p class="subtitle">
+                  Self-hosted media server on a repurposed laptop
+                </p>
+              </div>
+              <p class="prose">
+                An old Dell laptop became a hardened Windows 11 media server for
+                the home network, with nothing exposed to the internet. Jellyfin
+                and automated media management run as low-privilege services,
+                with downloads behind a VPN kill switch and admin access over
+                key-only SSH. 11 decision records and 8 incident write-ups
+                document the build, and CI runs shellcheck, PSScriptAnalyzer and
+                secret scanning.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>PowerShell</li>
+                <li>Bash</li>
+                <li>Windows 11</li>
+                <li>NSSM</li>
+                <li>OpenSSH</li>
+                <li>GitHub Actions</li>
+                <li>gitleaks</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://github.com/dandutra/jellyfin-home-server"
+                  >Source</a
+                >
+              </div>
+            </article>
+
+            <p class="more-link">
+              <a href="https://github.com/dandutra">More projects on GitHub</a>
+            </p>
+          </section>
+
+          <section aria-labelledby="experience">
+            <h2 id="experience">Experience</h2>
+            <article>
+              <div>
+                <h3>
+                  Systems Developer (Co-op) · HOOPP (Healthcare of Ontario
+                  Pension Plan)
+                </h3>
+                <p class="subtitle dates">May 2025 – Dec 2025 · Toronto</p>
+              </div>
+              <ul class="prose">
+                <li>
+                  Built production PowerShell automations on Azure Function Apps
+                  and Automation runbooks, including permission audits for
+                  sensitive SharePoint folders and mailbox-health alerts.
+                </li>
+                <li>
+                  Set up RingCentral API access with scoped roles and a JWT
+                  service account, so another team could pull call logs into
+                  Azure Data Factory.
+                </li>
+                <li>
+                  Administered Microsoft 365 and corporate telephony, and
+                  resolved staff support requests.
+                </li>
+                <li>
+                  Rolled out Copilot Studio and agents across the organization,
+                  and trained staff to use them.
+                </li>
+              </ul>
+            </article>
+            <p class="prose muted">
+              Before tech: ship pilot for 5 years on offshore subsea and cargo
+              vessels, Rio de Janeiro (2019 – 2024).
+            </p>
+          </section>
+
+          <section aria-labelledby="how">
+            <h2 id="how">How I Work</h2>
+            <p class="prose">
+              I build with Claude Code, and the whole setup is public in
+              <a href="https://github.com/dandutra/agent-workflow"
+                >agent-workflow</a
+              >. Every feature starts as a written plan that I question until
+              the design is settled. Logic that matters is written test-first.
+              Each pull request goes to three review agents, and a fourth checks
+              their findings against the code before I see them. A hook blocks
+              direct pushes to <code>main</code>, so every change goes through
+              review. A new tool stays only if it passes a two-week productivity
+              check recorded in the repo.
+            </p>
+            <p class="prose">
+              This site was planned the same way:
+              <a
+                href="https://github.com/dandutra/dandutra.github.io/blob/main/docs/spec.md"
+                >spec</a
+              >.
+            </p>
+          </section>
+
+          <section aria-labelledby="about">
+            <h2 id="about">About</h2>
+            <p class="prose">
+              I spent five years as a ship pilot, holding vessels in position
+              during offshore subsea operations. Writing PowerShell scripts to
+              automate compliance work on board is what pulled me into software.
+              I left that career to study Computer Programming at Seneca
+              Polytechnic in Toronto, where I made the President’s Honour List
+              twice. In 2026 I also mentored six new Seneca students through the
+              Peer Mentoring program.
+            </p>
+          </section>
+        </main>
+
+        <footer class="site-footer" aria-labelledby="contact">
+          <h2 id="contact">Contact</h2>
+          <p class="prose">Email is the fastest way to reach me.</p>
+          <div class="link-row">
+            <a href="mailto:danieldutra06@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/daniel-dutra-489718a2/"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/dandutra">GitHub</a>
+          </div>
+        </footer>
+      </div>
+
+      <nav class="section-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#how">How I Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="resume-link"><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <a class="to-top" href="#top" aria-label="Back to top">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 -960 960 960"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M160-760v-80h640v80H160Zm280 640v-408L336-424l-56-56 200-200 200 200-56 56-104-104v408h-80Z"
+        />
+      </svg>
+    </a>
   </body>
 </html>

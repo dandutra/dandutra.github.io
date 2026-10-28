@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniel Dutra, resume</title>
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.dataset.theme = saved;
+        }
+      } catch {
+        // Storage can be blocked; the page then follows the OS theme.
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <main class="content">
+        <h1 translate="no">Daniel Dutra</h1>
+        <p class="prose">
+          The resume page is being built. Until then, email
+          <a href="mailto:danieldutra06@gmail.com">danieldutra06@gmail.com</a>
+          for a PDF, or go back to the <a href="index.html">portfolio</a>.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
