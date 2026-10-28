@@ -1,0 +1,4 @@
+node_modules/
+.lighthouseci/
+.lycheecache
+.DS_Store
