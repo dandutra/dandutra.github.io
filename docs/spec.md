@@ -94,19 +94,19 @@ Each plan step is a branch and a PR. `/review` runs the Standards axis only. Dan
 
 ## Decisions
 
-| Decision | Rejected | Why |
-|---|---|---|
-| One page plus a separate HTML resume page | Single page; per-project pages | Recruiters skim one page. The resume page prints to PDF and links straight from an application. |
-| Hand-maintained HTML for both pages | Build script from one data file; JS rendering from JSON | The overlap is a few lines that change rarely. JS rendering breaks printing, translation and crawlers. |
-| "How I Work" as a section | Project card for agent-workflow | The repo has no tests or CI. It reads as process, and a card would show it twice. |
-| Copy before design | Mock with placeholder text | Text length drives card height and layout. |
-| GoatCounter | No analytics | Shows whether application links get opened. About 3.5 KB, no cookies. |
-| Live link before public source for Casa Escala | Wait for the scrub | The scrub is separate work in another repo and should not block launch. |
-| Phone menu as a `popover` with a blurred backdrop | Horizontal nav row; no menu | A row of six links wraps badly at 390px. `popover` opens without JS, and its links lead to sections of this page or to the resume, which the header also links. |
-| Two Casa Escala screenshots | One screenshot | The copy describes shifts and groups. The calendar shows shifts, and the second shot shows the group ranking. The two together weigh 44 KB. |
-| Text contact links in the resume header | Gmail, GitHub and LinkedIn icons | ATS parsers and the printed PDF read text. Icons also needed an attribution link for the Icons8 licence. |
-| Back-to-top link revealed by CSS scroll-driven animation | Reveal with JS; a link that is always visible | It needs no JS, and where the browser lacks support the link stays visible and still works. |
-| Status line without the school name | "Graduating from Seneca Polytechnic" | The header shows the work first. About and the resume name the school. |
+| Decision                                                 | Rejected                                                | Why                                                                                                                                                             |
+| -------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| One page plus a separate HTML resume page                | Single page; per-project pages                          | Recruiters skim one page. The resume page prints to PDF and links straight from an application.                                                                 |
+| Hand-maintained HTML for both pages                      | Build script from one data file; JS rendering from JSON | The overlap is a few lines that change rarely. JS rendering breaks printing, translation and crawlers.                                                          |
+| "How I Work" as a section                                | Project card for agent-workflow                         | The repo has no tests or CI. It reads as process, and a card would show it twice.                                                                               |
+| Copy before design                                       | Mock with placeholder text                              | Text length drives card height and layout.                                                                                                                      |
+| GoatCounter                                              | No analytics                                            | Shows whether application links get opened. About 3.5 KB, no cookies.                                                                                           |
+| Live link before public source for Casa Escala           | Wait for the scrub                                      | The scrub is separate work in another repo and should not block launch.                                                                                         |
+| Phone menu as a `popover` with a blurred backdrop        | Horizontal nav row; no menu                             | A row of six links wraps badly at 390px. `popover` opens without JS, and its links lead to sections of this page or to the resume, which the header also links. |
+| Two Casa Escala screenshots                              | One screenshot                                          | The copy describes shifts and groups. The calendar shows shifts, and the second shot shows the group ranking. The two together weigh 44 KB.                     |
+| Text contact links in the resume header                  | Gmail, GitHub and LinkedIn icons                        | ATS parsers and the printed PDF read text. Icons also needed an attribution link for the Icons8 licence.                                                        |
+| Back-to-top link revealed by CSS scroll-driven animation | Reveal with JS; a link that is always visible           | It needs no JS, and where the browser lacks support the link stays visible and still works.                                                                     |
+| Status line without the school name                      | "Graduating from Seneca Polytechnic"                    | The header shows the work first. About and the resume name the school.                                                                                          |
 
 ## Plan
 

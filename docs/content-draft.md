@@ -18,6 +18,7 @@ Resume · GitHub · LinkedIn · Email
 ## Projects
 
 ### Casa Escala
+
 Shift-rotation scheduler for offshore crews
 
 Casa Escala finds and ranks the dates that work best for a group to meet, based on everyone’s offshore work rotations. It is a Go monolith with server-rendered pages, SQLite with streaming backups, and Google or email sign-in. It has 92 users as of October 2026, and about 480 tests run in CI against a real database.
@@ -32,6 +33,7 @@ _UI in Brazilian Portuguese, built for Brazilian offshore crews._
 [screenshot: `assets/casa-escala-groups.webp`] Alt: "Casa Escala on a phone: the best days for a group to meet, led by Friday 30/10 with all six members available."
 
 ### Jellyfin Home Server
+
 Self-hosted media server on a repurposed laptop
 
 An old Dell laptop became a hardened Windows 11 media server for the home network, with nothing exposed to the internet. Jellyfin and automated media management run as low-privilege services, with downloads behind a VPN kill switch and admin access over key-only SSH. 11 decision records and 8 incident write-ups document the build, and CI runs shellcheck, PSScriptAnalyzer and secret scanning.
@@ -45,6 +47,7 @@ More projects on GitHub
 ## Experience
 
 ### Systems Developer (Co-op) · HOOPP (Healthcare of Ontario Pension Plan)
+
 May 2025 – Dec 2025 · Toronto
 
 - Built production PowerShell automations on Azure Function Apps and Automation runbooks, including permission audits for sensitive SharePoint folders and mailbox-health alerts.
@@ -83,6 +86,7 @@ _Print preview, not a separate line: the print stylesheet adds each address afte
 ## Experience
 
 ### Systems Developer (Co-op), HOOPP (Healthcare of Ontario Pension Plan)
+
 May 2025 – Dec 2025 · Toronto, ON
 
 - Built production PowerShell automations on Azure Function Apps and Automation runbooks, including permission audits for sensitive SharePoint folders and mailbox-size alerts.
@@ -94,6 +98,7 @@ May 2025 – Dec 2025 · Toronto, ON
 - Rolled out Copilot Studio and agents across the organization, and trained staff to use them.
 
 ### Ship Pilot, Oceanpact (subsea operations) and Starnav (cargo operations)
+
 Feb 2019 – Mar 2024 · Rio de Janeiro, Brazil
 
 - Automated regulatory compliance tasks with PowerShell scripts.
@@ -102,11 +107,13 @@ Feb 2019 – Mar 2024 · Rio de Janeiro, Brazil
 ## Projects
 
 ### Casa Escala, shift-rotation scheduler for offshore crews · casaescala.me
+
 - Go web app that ranks the dates that work best for a group to meet, from each member's work rotation. 92 users as of October 2026.
 - Server-rendered pages with htmx, SQLite, Google OAuth and email sign-in.
 - About 480 tests against a real database, CI on GitHub Actions, deployed to a VPS with Caddy, systemd and Litestream backups for under $10 a month.
 
 ### Jellyfin Home Server · github.com/dandutra/jellyfin-home-server
+
 - Hardened Windows 11 media server with low-privilege services, a VPN kill switch and LAN-only key-based SSH.
 - 11 decision records, 8 incident write-ups, and CI with shellcheck, PSScriptAnalyzer and gitleaks.
 
@@ -121,14 +128,18 @@ Feb 2019 – Mar 2024 · Rio de Janeiro, Brazil
 ## Education
 
 ### Diploma, Computer Programming, Seneca Polytechnic
+
 Expected Dec 2026 · Toronto, ON
 President's Honour List, Summer 2024 and Fall 2024.
 
 ### B.S. Nautical Sciences, EFOMM (Merchant Marine Officers School)
+
 Feb 2014 – Jan 2019 · Rio de Janeiro, Brazil
 
 ## Leadership & Volunteering
 
 ### Peer Mentor, Seneca Peer Mentoring
+
 May 2026 – Aug 2026
+
 - Guided 6 new students to college resources such as career fairs, and helped them choose program paths and manage their time.
