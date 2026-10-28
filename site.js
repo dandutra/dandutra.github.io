@@ -1,4 +1,4 @@
-// The inline script in <head> applies the saved theme before first paint; this file wires the toggles.
+// The inline <head> script applies the saved theme before first paint, so both must read the same "theme" key.
 const root = document.documentElement;
 const osDark = matchMedia("(prefers-color-scheme: dark)");
 const toggles = document.querySelectorAll(".theme-toggle");

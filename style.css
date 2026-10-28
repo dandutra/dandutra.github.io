@@ -65,8 +65,6 @@
   background: rgba(34, 34, 34, 0.6);
 }
 
-/* Base */
-
 [hidden] {
   display: none !important;
 }
@@ -160,8 +158,6 @@ code {
   border-color: var(--muted);
 }
 
-/* Phone top bar and menu */
-
 .top-bar {
   position: sticky;
   top: 0;
@@ -230,8 +226,6 @@ code {
   color: var(--link);
 }
 
-/* Page layout */
-
 .page {
   padding: 32px 16px 72px;
   display: grid;
@@ -248,8 +242,6 @@ code {
 .section-nav {
   display: none;
 }
-
-/* Header */
 
 .site-header {
   display: flex;
@@ -300,8 +292,6 @@ h1 {
   margin-top: 8px;
 }
 
-/* Sections */
-
 main {
   display: flex;
   flex-direction: column;
@@ -316,7 +306,7 @@ section,
   padding-top: var(--section-pad);
 }
 
-#projects-section {
+.projects {
   gap: var(--project-gap);
 }
 
@@ -406,8 +396,6 @@ ul.prose {
 .more-link {
   font-weight: 600;
 }
-
-/* Back to top */
 
 .to-top {
   position: fixed;

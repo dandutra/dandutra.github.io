@@ -24,11 +24,11 @@ Every rule below is checkable in review.
 
 - Single column capped at `66ch`.
 - Fonts: `'Helvetica Neue', Helvetica, Arial, sans-serif`, which loads nothing. Tech tags (15px) and inline code (16px) use the system monospace stack.
-- Type scale on `index.html`: section headings 28px, card and entry headings 24px, body copy 18px at line height 1.75. The header and short lines stay at 17px and 1.6.
+- Type scale on `index.html`: section headings 28px, card and entry headings 24px, body copy 18px at line height 1.75. In the header, the headline is 21px, and the status line and links are 18px. Short lines stay at 17px and 1.6.
 - Colours, light: background `#fefefa`, text `#1b1d1f`, muted `#5a6068`, links `#2c5a8c`, tag fill `#e4e6e9`. Dark: background `#222222`, text `#e8eaed`, muted `#a5abb3`, links `#8db6e3`, tag fill `#2f353c`. Every text colour passes AA on its background; muted text is the lowest at 6.3:1 in light and 6.9:1 in dark.
 - No divider lines between sections; whitespace separates them.
 - Spacing on `index.html`, phone then desktop: 70/56px between blocks, 40/32px above each section heading and 50/40px between projects. Cards, the HOOPP entry and the Experience, How I Work, About and Contact headings have a 28/22px gap below. The Jellyfin card has an extra 30/24px above it.
-- One muted blue accent for links, with no underline. Links inside running text are also weight 600. WCAG 1.4.1 asks for 3:1 contrast between link and body text, and the link colour alone does not reach it. No icons except the theme toggle, the phone menu button and the back-to-top link. Links are text ("GitHub", "LinkedIn").
+- One muted blue accent for links, underlined only on hover. Links inside running text are also weight 600. WCAG 1.4.1 asks for 3:1 contrast between link and body text, and the link colour alone does not reach it. No icons except the theme toggle, the phone menu button and the back-to-top link. Links are text ("GitHub", "LinkedIn").
 - Back to top: an `<a href="#top">` fixed in a bottom corner, with the arrow from `assets/back-to-top-arrow.svg` inlined with `fill="currentColor"` so it follows the theme, and an `aria-label`. It fades in after the reader scrolls, through `animation-timeline: scroll()` and no JS. Browsers without scroll-driven animations show it all the time.
 - Desktop: a section nav (Projects, Experience, How I Work, About, Contact, Resume) sits in the right margin and stays in view with `position: sticky`. It is 22px with line height 2.5.
 - Phone: a sticky top bar holds "Daniel's portfolio" (the `h1` below already gives the name), the theme toggle and a menu button. The menu is a `popover` element opened by `popovertarget`, so it needs no JS. The browser handles Esc, outside clicks and focus. Its `::backdrop` blurs the page behind the links.
@@ -44,14 +44,14 @@ Every rule below is checkable in review.
 
 1. **Header**: "Daniel Dutra", "Full-stack developer", Toronto, Canada. Status line: graduating Dec 2026, open to full-stack and back-end roles. The school name stays out of the header; About and the resume name it. Links: Resume, GitHub, LinkedIn, Email.
 2. **Projects**
-   - **Casa Escala**, subtitle "Shift-rotation scheduler for offshore crews". Repo `schedule-matcher`. Two screenshots side by side: the shift calendar (`assets/casa-escala.webp`) and the best days for a group to meet (`assets/casa-escala-groups.webp`). Each is WebP, shown at 600×630 from the top, under 40 KB, with `loading="lazy"` and explicit width and height. Note: UI in Brazilian Portuguese, built for Brazilian offshore crews. Links: Live (`casaescala.me`); Source once the repo is public.
+   - **Casa Escala**, subtitle "Shift-rotation scheduler for offshore crews". Repo `schedule-matcher`. Two screenshots side by side: the shift calendar (`assets/casa-escala.webp`) and the best days for a group to meet (`assets/casa-escala-groups.webp`). Each is WebP, shown at 600×630 from the top, under 40 KB, with `loading="lazy"` and explicit width and height. Note: UI in Brazilian Portuguese, built for Brazilian offshore crews. Links: Live site (`casaescala.me`); Source once the repo is public.
    - **Jellyfin Home Server**. Repo `jellyfin-home-server`. Framed as a self-hosted media server; the download stack is described neutrally ("automated media management behind a VPN kill switch").
    - Each card: summary of up to 3 sentences, a row of tech tags, links.
-   - Closes with a "More on GitHub" link. No list of smaller repos.
+   - Closes with a "More projects on GitHub" link. No list of smaller repos.
 3. **Experience**: HOOPP, Systems Developer (Co-op), May 2025 – Dec 2025, as one entry. Then one line: five years as a ship pilot (offshore and cargo), Rio de Janeiro.
 4. **How I Work**: the AI-assisted workflow, with the `agent-workflow` repo as evidence. A section, not a project card.
 5. **About**: the switch from ship pilot to developer, education, one clause on peer mentoring.
-6. **Contact**: one line and the same links as the header. Doubles as the footer.
+6. **Contact**: one line and the links Email, LinkedIn and GitHub. Doubles as the footer.
 
 ### `resume.html`
 
