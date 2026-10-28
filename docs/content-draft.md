@@ -11,7 +11,7 @@ All page copy, for review before it goes into HTML. Rules: [spec.md](spec.md), "
 **Daniel Dutra**
 Full-stack developer · Toronto, Canada
 
-Graduating from Seneca Polytechnic in December 2026. Open to full-stack and back-end roles.
+Graduating in December 2026. Open to full-stack and back-end roles.
 
 Resume · GitHub · LinkedIn · Email
 
@@ -27,14 +27,16 @@ Casa Escala finds and ranks the dates that work best for a group to meet, based 
 Live site · Source (once public)
 _UI in Brazilian Portuguese, built for Brazilian offshore crews._
 
-[screenshot]
+[screenshot: `assets/casa-escala.webp`] Alt: "Casa Escala on a phone: the October 2026 calendar, with offshore days in red and days at home in green."
+
+[screenshot: `assets/casa-escala-groups.webp`] Alt: "Casa Escala on a phone: the best days for a group to meet, led by Friday 30/10 with all six members available."
 
 ### Jellyfin Home Server
 Self-hosted media server on a repurposed laptop
 
 An old Dell laptop became a hardened Windows 11 media server for the home network, with nothing exposed to the internet. Jellyfin and automated media management run as low-privilege services, with downloads behind a VPN kill switch and admin access over key-only SSH. 11 decision records and 8 incident write-ups document the build, and CI runs shellcheck, PSScriptAnalyzer and secret scanning.
 
-`PowerShell` `Bash` `Windows 11` `Jellyfin` `NSSM` `OpenSSH` `GitHub Actions` `gitleaks`
+`PowerShell` `Bash` `Windows 11` `NSSM` `OpenSSH` `GitHub Actions` `gitleaks`
 
 Source
 
@@ -74,7 +76,9 @@ Email · LinkedIn · GitHub
 
 **Daniel Dutra**
 Full-stack developer · Toronto, Canada
-danieldutra06@gmail.com · github.com/dandutra · linkedin.com/in/daniel-dutra-489718a2 · dandutra.github.io
+Email · LinkedIn · GitHub
+
+_Print preview, not a separate line: the print stylesheet adds each address after its label, as in "Email (danieldutra06@gmail.com) · LinkedIn (linkedin.com/in/daniel-dutra-489718a2) · GitHub (github.com/dandutra)"._
 
 ## Experience
 
