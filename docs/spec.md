@@ -86,7 +86,7 @@ This is the general resume. Tailored versions for applications live outside this
 
 ## Checks
 
-`npm run check` runs html-validate, `prettier --check`, Lighthouse CI with `budget.json` (the weight budget above), and lychee for links. CI runs the same command on every push and PR.
+`npm run check` runs html-validate, `prettier --check`, `scripts/check-size.mjs` (the weight budget above, on file sizes), Lighthouse CI, and lychee for links. Lighthouse CI fails below an accessibility score of 100. CI runs the same command on every push and PR.
 
 ## Workflow
 
@@ -113,7 +113,7 @@ Each plan step is a branch and a PR. `/review` runs the Standards axis only. Dan
 Tracked as GitHub Issues on `dandutra/dandutra.github.io`. The repo exists with Pages on from `main`.
 
 1. **Prerequisites (Daniel).** Create a GoatCounter account and site code. Take a signed-in Casa Escala screenshot.
-2. **Tooling.** `package.json` with `npm run check`, `budget.json`, html-validate and prettier configs, lychee config, CI workflow.
+2. **Tooling.** `package.json` with `npm run check`, a page-weight script, html-validate and prettier configs, lychee config, CI workflow.
 3. **Copy draft.** Write all copy in `docs/content-draft.md`: header and status line, both project cards, HOOPP entry, How I Work, About, Contact, full resume. Daniel reviews.
 4. **Design mock.** Claude Design mock of both pages in light and dark, using the approved copy. Daniel approves. Blocked by 3.
 5. **Main page.** `index.html`, `style.css`, theme script and toggle, favicon, meta and Open Graph tags. Blocked by 2 and 4.

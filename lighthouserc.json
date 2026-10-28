@@ -6,7 +6,9 @@
       "numberOfRuns": 1
     },
     "assert": {
-      "budgetsFile": "budget.json"
+      "assertions": {
+        "categories:accessibility": ["error", { "minScore": 1 }]
+      }
     }
   }
 }

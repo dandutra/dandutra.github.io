@@ -3,10 +3,11 @@
   "private": true,
   "description": "Dev tooling only. The site itself has no build step.",
   "scripts": {
-    "check": "npm run check:html && npm run check:format && npm run check:budget && npm run check:links",
+    "check": "npm run check:html && npm run check:format && npm run check:size && npm run check:lighthouse && npm run check:links",
     "check:html": "html-validate \"*.html\"",
     "check:format": "prettier --check .",
-    "check:budget": "lhci autorun",
+    "check:size": "node scripts/check-size.mjs",
+    "check:lighthouse": "lhci autorun",
     "check:links": "lychee --config lychee.toml --no-progress ."
   },
   "devDependencies": {
