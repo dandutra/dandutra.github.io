@@ -1,7 +1,8 @@
 exclude_path = ["node_modules", ".lighthouseci"]
 
 # LinkedIn answers 999 to bots, so its links can't be checked.
-exclude = ["^https://www\\.linkedin\\.com/"]
+# The site's own URL tests the live deploy, not the PR, and 404s while offline.
+exclude = ["^https://www\\.linkedin\\.com/", "^https://dandutra\\.github\\.io/"]
 
 # GitHub and some hosts rate-limit CI runners.
 accept = ["200..=299", "429"]
