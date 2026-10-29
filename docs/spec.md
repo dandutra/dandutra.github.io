@@ -15,7 +15,7 @@ Every rule below is checkable in review.
 
 ## Constraints
 
-- Plain HTML, CSS and JS on GitHub Pages, served from `main`. No build step and no framework. `package.json` holds dev tooling only.
+- Plain HTML, CSS and JS on GitHub Pages, served from `main` once launched. Until launch, Pages serves the empty `offline` branch, because GitHub can't turn Pages off for a user-site repo. No build step and no framework. `package.json` holds dev tooling only.
 - No on-scroll animations, videos or heavy images. The one exception is the back-to-top link's CSS fade-in.
 - English only. `<html lang="en">`, all text as real HTML text, so browser translation works for Portuguese-speaking family. Only the name and product names ("Jellyfin", "Casa Escala") get `translate="no"`.
 - Accessibility: WCAG AA contrast in both themes, visible focus styles, a skip link, the theme toggle exposes its state with `aria-pressed`.
@@ -110,7 +110,7 @@ Each plan step is a branch and a PR. `/review` runs the Standards axis only. Dan
 
 ## Plan
 
-Tracked as GitHub Issues on `dandutra/dandutra.github.io`. The repo exists with Pages on from `main`.
+Tracked as GitHub Issues on `dandutra/dandutra.github.io`. The repo exists. Pages serves the empty `offline` branch until launch.
 
 1. **Prerequisites (Daniel).** Create a GoatCounter account and site code. Take a signed-in Casa Escala screenshot.
 2. **Tooling.** `package.json` with `npm run check`, a page-weight script, html-validate and prettier configs, lychee config, CI workflow.
@@ -119,6 +119,6 @@ Tracked as GitHub Issues on `dandutra/dandutra.github.io`. The repo exists with 
 5. **Main page.** `index.html`, `style.css`, theme script and toggle, favicon, meta and Open Graph tags. Blocked by 2 and 4.
 6. **Resume page.** `resume.html`, print styles, `resume.pdf`. Blocked by 5 (shared CSS).
 7. **Assets and 404.** Preview image, compressed screenshot, `404.html`. Blocked by 1 and 5.
-8. **Launch.** GoatCounter tag, Lighthouse pass within budget, browser-translation check to Portuguese, contrast check in both themes. Blocked by 6 and 7.
+8. **Launch.** Pages switched from `offline` back to `main`, then the `offline` branch deleted. GoatCounter tag, Lighthouse pass within budget, browser-translation check to Portuguese, contrast check in both themes. Blocked by 6 and 7.
 9. **Casa Escala source link.** Add once schedule-matcher is scrubbed and public. Blocked by the scrub in the schedule-matcher repo: rotate the OAuth client ID in `deploy/casaescala.env.example`, replace it with a placeholder, check git history.
 10. **Copilot card.** Add once the job copilot repo exists with a README.
