@@ -9,3 +9,6 @@ accept = ["200..=299", "429"]
 
 # The README links to the local preview server.
 exclude_loopback = true
+
+# 404.html uses root-relative links, which resolve against the repo root.
+root_dir = "."
