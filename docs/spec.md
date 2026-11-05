@@ -61,7 +61,7 @@ Every rule below is checkable in review.
 3. Projects: Casa Escala, Jellyfin Home Server.
 4. Skills, grouped: Languages; Back-end and data; Front-end; Cloud and ops; Tools. This list is what ATS keyword matching reads.
 5. Education: Diploma, Computer Programming, Seneca Polytechnic, Dec 2026, President's Honour List (Summer 2024, Fall 2024). B.S. Nautical Sciences, EFOMM, Rio de Janeiro, 2014 – 2019.
-6. Leadership & Volunteering: Seneca Peer Mentoring, May 2026 – Aug 2026. Guided 6 new students to college resources such as career fairs, and helped them with program choices and time management, about 3 h/week.
+6. Leadership & Volunteering: Seneca Peer Mentoring, May 2026 – Aug 2026. Guided 6 new students to college resources such as career fairs, and helped them with program choices and time management, about 3 hours a week.
 
 The screen version uses the formatting of `index.html`: the same type scale, colours, themes and toggle, and entries styled like the HOOPP entry there (heading, muted dates line, bullet list).
 

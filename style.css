@@ -522,9 +522,8 @@ ul.prose {
   }
 }
 
-/* Print is for the resume PDF: light colours, ink-friendly sizes, addresses as text for ATS parsers. */
-
 @media print {
+  /* Three :root beat the dark-theme selectors, which have two parts each. */
   :root:root:root {
     color-scheme: light;
     --bg: #ffffff;
@@ -542,6 +541,7 @@ ul.prose {
     line-height: 1.4;
   }
 
+  /* !important beats screen rules like `.resume .site-header .theme-toggle`. */
   .skip-link,
   .theme-toggle,
   .to-top,
@@ -625,6 +625,7 @@ ul.prose {
     white-space: nowrap;
   }
 
+  /* ATS parsers read the PDF, so print shows link addresses as text. */
   .contact-links a::after {
     content: " (" attr(data-print) ")";
     font-weight: 400;

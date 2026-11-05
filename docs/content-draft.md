@@ -148,4 +148,4 @@ Feb 2014 – Jan 2019 · Rio de Janeiro, Brazil
 
 May 2026 – Aug 2026
 
-- Guided 6 new students to college resources such as career fairs, and helped them choose program paths and manage their time.
+- Guided 6 new students to college resources such as career fairs, and helped them choose program paths and manage their time, about 3 hours a week.
