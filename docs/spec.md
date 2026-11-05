@@ -23,8 +23,9 @@ Every rule below is checkable in review.
 ## Look
 
 - Single column capped at `66ch`.
-- Fonts: `'Helvetica Neue', Helvetica, Arial, sans-serif`, which loads nothing. Tech tags (15px) and inline code (16px) use the system monospace stack.
-- Type scale on `index.html`: section headings 28px, card and entry headings 24px, body copy 18px at line height 1.75. In the header, the headline is 21px, and the status line and links are 18px. Short lines stay at 17px and 1.6.
+- Fonts: `'Helvetica Neue', Helvetica, Arial, sans-serif`, which loads nothing. Section headings use the system serif stack `Charter, 'Bitstream Charter', 'Iowan Old Style', Georgia, serif`, which also loads nothing. Tech tags (15px) and inline code (16px) use the system monospace stack.
+- Each section heading has a 32×3px bar in the link colour above it. The bar and the serif are screen-only, so the printed resume uses the body font throughout.
+- Type scale on `index.html`: section headings 32px, card and entry headings 24px, body copy 18px at line height 1.75. In the header, the headline is 21px, and the status line and links are 18px. Short lines stay at 17px and 1.6.
 - Colours, light: background `#fefefa`, text `#1b1d1f`, muted `#5a6068`, links `#2c5a8c`, tag fill `#e4e6e9`. Dark: background `#222222`, text `#e8eaed`, muted `#a5abb3`, links `#8db6e3`, tag fill `#2f353c`. Every text colour passes AA on its background; muted text is the lowest at 6.3:1 in light and 6.9:1 in dark.
 - No divider lines between sections; whitespace separates them.
 - Spacing on `index.html`, phone then desktop: 70/56px between blocks, 40/32px above each section heading and 50/40px between projects. Cards, the HOOPP entry and the Experience, How I Work, About and Contact headings have a 28/22px gap below. The Jellyfin card has an extra 30/24px above it.
@@ -44,13 +45,13 @@ Every rule below is checkable in review.
 
 1. **Header**: "Daniel Dutra", "Full-stack developer", Toronto, Canada. Status line: graduating Dec 2026, open to full-stack and back-end roles. The school name stays out of the header; About and the resume name it. Links: Resume, GitHub, LinkedIn, Email.
 2. **Projects**
-   - **Casa Escala**, subtitle "Shift-rotation scheduler for offshore crews". Repo `schedule-matcher`. Two screenshots side by side: the shift calendar (`assets/casa-escala.webp`) and the best days for a group to meet (`assets/casa-escala-groups.webp`). Each is WebP, shown at 600×630 from the top, under 40 KB, with `loading="lazy"` and explicit width and height. Note: UI in Brazilian Portuguese, built for Brazilian offshore crews. Links: Live site (`casaescala.me`); Source once the repo is public.
+   - **Casa Escala**, subtitle "Shift-rotation matcher for offshore crews". Repo `schedule-matcher`. Two screenshots side by side: the shift calendar (`assets/casa-escala.webp`) and the best days for a group to meet (`assets/casa-escala-groups.webp`). Each is WebP, shown at 600×630 from the top, under 40 KB, with `loading="lazy"` and explicit width and height. Note: UI in Brazilian Portuguese, built for Brazilian offshore crews. Links: Live site (`casaescala.me`); Source once the repo is public.
    - **Jellyfin Home Server**. Repo `jellyfin-home-server`. Framed as a self-hosted media server; the download stack is described neutrally ("automated media management behind a VPN kill switch").
    - Each card: summary of up to 3 sentences, a row of tech tags, links.
    - Closes with a "More projects on GitHub" link. No list of smaller repos.
 3. **Experience**: HOOPP, Systems Developer (Co-op), May 2025 – Dec 2025, as one entry. Then one line: five years as a ship pilot (offshore and cargo), Rio de Janeiro.
 4. **How I Work**: the AI-assisted workflow, with the `agent-workflow` repo as evidence. A section, not a project card.
-5. **About**: the switch from ship pilot to developer, education, one clause on peer mentoring.
+5. **About**: three paragraphs. First, the preference for new projects and design work, and how Daniel learns design with AI. Second, the switch from ship pilot to developer, education, and one sentence on peer mentoring. Third, one or two lines on life outside work.
 6. **Contact**: one line and the links Email, LinkedIn and GitHub. Doubles as the footer.
 
 ### `resume.html`
@@ -61,6 +62,8 @@ Every rule below is checkable in review.
 4. Skills, grouped: Languages; Back-end and data; Front-end; Cloud and ops; Tools. This list is what ATS keyword matching reads.
 5. Education: Diploma, Computer Programming, Seneca Polytechnic, Dec 2026, President's Honour List (Summer 2024, Fall 2024). B.S. Nautical Sciences, EFOMM, Rio de Janeiro, 2014 – 2019.
 6. Leadership & Volunteering: Seneca Peer Mentoring, May 2026 – Aug 2026. Guided 6 new students to college resources such as career fairs, and helped them with program choices and time management, about 3 h/week.
+
+The screen version uses the formatting of `index.html`: the same type scale, colours, themes and toggle, and entries styled like the HOOPP entry there (heading, muted dates line, bullet list).
 
 No summary or objective paragraph. A print stylesheet makes "Save as PDF" produce a clean text-based PDF. The committed `resume.pdf` comes from that print and is linked next to the HTML version.
 
