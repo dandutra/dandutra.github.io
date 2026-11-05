@@ -4,8 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Daniel Dutra, resume</title>
-    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Resume of Daniel Dutra, full-stack developer in Toronto."
+    />
     <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#fefefa"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#222222"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="canonical" href="https://dandutra.github.io/resume.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dandutra.github.io/resume.html" />
+    <meta property="og:title" content="Daniel Dutra, resume" />
+    <meta
+      property="og:description"
+      content="Resume of Daniel Dutra, full-stack developer in Toronto."
+    />
+    <meta
+      property="og:image"
+      content="https://dandutra.github.io/assets/og-preview.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Daniel Dutra is a full-stack developer in Toronto, Canada."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://dandutra.github.io/assets/og-preview.webp"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232c5a8c'/%3E%3Ctext x='16' y='21.5' font-family='Helvetica,Arial,sans-serif' font-size='14' font-weight='700' text-anchor='middle' fill='%23fefefa'%3EDD%3C/text%3E%3C/svg%3E"
+    />
     <script>
       try {
         const saved = localStorage.getItem("theme");
@@ -17,17 +58,285 @@
       }
     </script>
     <link rel="stylesheet" href="style.css" />
+    <script src="site.js" defer></script>
   </head>
-  <body>
+  <body class="resume">
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <div class="page">
-      <main class="content">
-        <h1 translate="no">Daniel Dutra</h1>
-        <p class="prose">
-          The resume page is being built. Until then, email
-          <a href="mailto:danieldutra06@gmail.com">danieldutra06@gmail.com</a>
-          for a PDF, or go back to the <a href="index.html">portfolio</a>.
-        </p>
-      </main>
+      <div class="content">
+        <header class="site-header">
+          <div class="title-row">
+            <h1 translate="no">Daniel Dutra</h1>
+            <button
+              type="button"
+              class="icon-btn theme-toggle"
+              aria-label="Dark theme"
+              aria-pressed="false"
+              hidden
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </button>
+          </div>
+          <p class="headline">Full-stack developer · Toronto, Canada</p>
+          <nav class="link-row contact-links" aria-label="Contact">
+            <a
+              href="mailto:danieldutra06@gmail.com"
+              data-print="danieldutra06@gmail.com"
+              >Email</a
+            >
+            <a
+              href="https://www.linkedin.com/in/daniel-dutra-489718a2/"
+              data-print="linkedin.com/in/daniel-dutra-489718a2"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/dandutra"
+              data-print="github.com/dandutra"
+              >GitHub</a
+            >
+          </nav>
+          <p class="status screen-only">
+            <a href="resume.pdf">Download PDF</a> ·
+            <a href="index.html">Back to the portfolio</a>
+          </p>
+        </header>
+
+        <main id="main">
+          <section class="entries" aria-labelledby="experience">
+            <h2 id="experience">Experience</h2>
+            <article>
+              <div>
+                <h3>
+                  Systems Developer (Co-op), HOOPP (Healthcare of Ontario
+                  Pension Plan)
+                </h3>
+                <p class="subtitle dates">May 2025 – Dec 2025 · Toronto, ON</p>
+              </div>
+              <ul class="prose">
+                <li>
+                  Automated weekly quota monitoring for about 4,000 Exchange
+                  mailboxes using PowerShell, alerting the team at 80% capacity.
+                  Migrated the solution from Azure Functions to Azure Automation
+                  after repeated execution timeouts. It was still in production
+                  in October 2026, 10 months after my term ended.
+                </li>
+                <li>
+                  Automated the final step of RingCentral phone provisioning
+                  with PowerShell and Selenium, linking phones to Microsoft
+                  Teams. Deployed the script to an Azure Automation Hybrid
+                  Worker with step-by-step screenshot debugging.
+                </li>
+                <li>
+                  Established RingCentral API access for a department for the
+                  first time, configuring custom roles and a JWT-authenticated
+                  service account with call-log access for integration with
+                  Azure Data Factory.
+                </li>
+                <li>
+                  Developed a reusable Microsoft Graph app-registration
+                  validation function to verify shared credentials without
+                  triggering dependent onboarding, offboarding, or licensing
+                  automations. Renewed client secrets one automation at a time,
+                  because each stored its secret differently.
+                </li>
+                <li>
+                  Delivered onboarding, offboarding, licensing, and telephony
+                  automation changes through 2-week Agile sprints, contributing
+                  to Azure DevOps tickets, pull requests, code reviews, testing,
+                  and deployments. Adapted Azure Pipelines YAML for new
+                  automations, deployed through dev and production approval
+                  steps.
+                </li>
+                <li>
+                  Built a PnP PowerShell permission report covering about 5,000
+                  SharePoint files and folders after HR raised concerns about
+                  pay-stub confidentiality. Combined it with access testing to
+                  confirm that users granted Limited Access could not open the
+                  files, which closed the question.
+                </li>
+                <li>
+                  Partnered with a senior engineer to restrict third-party
+                  Outlook and Teams add-ins in two phases: blocking new
+                  installations and removing existing ones. Researched and
+                  tested the approach, then presented the ServiceNow change
+                  request for approval before production deployment.
+                </li>
+                <li>
+                  Administered Exchange hybrid, SharePoint, Power Platform,
+                  Microsoft Teams Rooms, and RingCentral services for about
+                  3,000 users, resolving more than 300 support tickets over 8
+                  months.
+                </li>
+              </ul>
+            </article>
+            <article>
+              <div>
+                <h3>
+                  Ship Pilot, Oceanpact (subsea operations) and Starnav (cargo
+                  operations)
+                </h3>
+                <p class="subtitle dates">
+                  Feb 2019 – Mar 2024 · Rio de Janeiro, Brazil
+                </p>
+              </div>
+              <ul class="prose">
+                <li>
+                  Automated regulatory compliance tasks with PowerShell scripts.
+                </li>
+                <li>
+                  Operated the Dynamic Positioning system during subsea
+                  operations, and led emergency drills with 100% compliance in
+                  safety audits.
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="entries" aria-labelledby="projects">
+            <h2 id="projects">Projects</h2>
+            <article>
+              <div>
+                <h3 translate="no">Casa Escala</h3>
+                <p class="subtitle">
+                  Shift-rotation matcher for offshore crews ·
+                  <a href="https://casaescala.me">casaescala.me</a>
+                </p>
+              </div>
+              <ul class="prose">
+                <li>
+                  Go web app that ranks the dates that work best for a group to
+                  meet, from each member’s work rotation. 92 users as of October
+                  2026.
+                </li>
+                <li>
+                  Server-rendered pages with htmx, SQLite, Google OAuth and
+                  email sign-in.
+                </li>
+                <li>
+                  About 480 tests against a real database, CI on GitHub Actions,
+                  deployed to a VPS with Caddy, systemd and Litestream backups
+                  for under $10 a month.
+                </li>
+              </ul>
+            </article>
+            <article>
+              <div>
+                <h3><span translate="no">Jellyfin</span> Home Server</h3>
+                <p class="subtitle">
+                  <a href="https://github.com/dandutra/jellyfin-home-server"
+                    >github.com/dandutra/jellyfin-home-server</a
+                  >
+                </p>
+              </div>
+              <ul class="prose">
+                <li>
+                  Hardened Windows 11 media server with low-privilege services,
+                  a VPN kill switch and LAN-only key-based SSH.
+                </li>
+                <li>
+                  11 decision records, 8 incident write-ups, and CI with
+                  shellcheck, PSScriptAnalyzer and gitleaks.
+                </li>
+              </ul>
+            </article>
+          </section>
+
+          <section aria-labelledby="skills">
+            <h2 id="skills">Skills</h2>
+            <ul class="prose skills">
+              <li>
+                <strong>Languages:</strong> Go, JavaScript, PowerShell, Bash,
+                SQL, C, C++
+              </li>
+              <li>
+                <strong>Back-end and data:</strong> HTTP servers in Go, Node.js,
+                Express, REST APIs, SQLite, Oracle, OAuth 2.0, JWT
+              </li>
+              <li><strong>Front-end:</strong> HTML, CSS, JavaScript, htmx</li>
+              <li>
+                <strong>Cloud and ops:</strong> Azure Functions, Azure
+                Automation, Azure Key Vault, Application Insights, Microsoft
+                Graph, Exchange Online, SharePoint, Microsoft 365
+                administration, Linux (systemd, ufw), Caddy, Cloudflare, Windows
+                administration
+              </li>
+              <li>
+                <strong>Tools:</strong> Git, GitHub Actions, Azure DevOps, Azure
+                Pipelines, Jenkins, Selenium, PnP PowerShell, ServiceNow, Claude
+                Code, Copilot Studio
+              </li>
+            </ul>
+          </section>
+
+          <section class="entries" aria-labelledby="education">
+            <h2 id="education">Education</h2>
+            <article>
+              <div>
+                <h3>Diploma, Computer Programming, Seneca Polytechnic</h3>
+                <p class="subtitle dates">Expected Dec 2026 · Toronto, ON</p>
+              </div>
+              <p class="prose">
+                President’s Honour List, Summer 2024 and Fall 2024.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3>
+                  B.S. Nautical Sciences, EFOMM (Merchant Marine Officers
+                  School)
+                </h3>
+                <p class="subtitle dates">
+                  Feb 2014 – Jan 2019 · Rio de Janeiro, Brazil
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section class="entries" aria-labelledby="volunteering">
+            <h2 id="volunteering">Leadership &amp; Volunteering</h2>
+            <article>
+              <div>
+                <h3>Peer Mentor, Seneca Peer Mentoring</h3>
+                <p class="subtitle dates">May 2026 – Aug 2026</p>
+              </div>
+              <ul class="prose">
+                <li>
+                  Guided 6 new students to college resources such as career
+                  fairs, and helped them choose program paths and manage their
+                  time, about 3 hours a week.
+                </li>
+              </ul>
+            </article>
+          </section>
+        </main>
+      </div>
     </div>
+
+    <a class="to-top" href="#top" aria-label="Back to top">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 -960 960 960"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M160-760v-80h640v80H160Zm280 640v-408L336-424l-56-56 200-200 200 200-56 56-104-104v408h-80Z"
+        />
+      </svg>
+    </a>
   </body>
 </html>

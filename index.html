@@ -195,16 +195,17 @@
               <div>
                 <h3 translate="no">Casa Escala</h3>
                 <p class="subtitle">
-                  Shift-rotation scheduler for offshore crews
+                  Shift-rotation matcher for offshore crews
                 </p>
               </div>
               <p class="prose">
-                Casa Escala finds and ranks the dates that work best for a group
-                to meet, based on everyone’s offshore work rotations. It is a Go
-                monolith with server-rendered pages, SQLite with streaming
-                backups, and Google or email sign-in. It has 92 users as of
-                October 2026, and about 480 tests run in CI against a real
-                database.
+                Casa Escala solves a real problem for 92 users as of October
+                2026: it finds and ranks the dates that work best for a group to
+                meet, based on everyone’s offshore work rotations. I wished this
+                had existed when I was planning my wedding. It’s a Go monolith
+                with server-rendered pages, SQLite with streaming backups,
+                Google or email sign-in, and about 480 tests that run in CI
+                against a real database.
               </p>
               <ul class="tags" aria-label="Technologies">
                 <li>Go</li>
@@ -301,12 +302,13 @@
                   Azure Data Factory.
                 </li>
                 <li>
-                  Administered Microsoft 365 and corporate telephony, and
-                  resolved staff support requests.
+                  Administered Exchange hybrid, SharePoint, Power Platform,
+                  Microsoft Teams Rooms, and RingCentral services, and resolved
+                  staff support requests.
                 </li>
                 <li>
-                  Rolled out Copilot Studio and agents across the organization,
-                  and trained staff to use them.
+                  Supported the organization-wide rollout of Copilot Studio and
+                  agents with user guides, licensing and support requests.
                 </li>
               </ul>
             </article>
@@ -322,13 +324,19 @@
               I build with Claude Code, and the whole setup is public in
               <a href="https://github.com/dandutra/agent-workflow"
                 >agent-workflow</a
-              >. Every feature starts as a written plan that I question until
-              the design is settled. Logic that matters is written test-first.
-              Each pull request goes to three review agents, and a fourth checks
-              their findings against the code before I see them. A hook blocks
-              direct pushes to <code>main</code>, so every change goes through
-              review. A new tool stays only if it passes a two-week productivity
-              check recorded in the repo.
+              >. I pressure-test ideas, reach a common understanding, slice the
+              plan and implement each part test-first. I record every decision,
+              gotcha and runbook in Google’s
+              <a
+                href="https://github.com/GoogleCloudPlatform/open-knowledge-format"
+                >Open Knowledge Format</a
+              >. Each pull request goes to three review agents, and a fourth
+              checks their findings against the code before I see them. A hook
+              blocks direct pushes to <code>main</code>, so every change goes
+              through review. A new tool stays only if it passes a two-week
+              productivity check recorded in the repo. All of this runs on a
+              US$20/month Claude Pro plan, with no extra usage credits or paid
+              API calls.
             </p>
             <p class="prose">
               This site was planned the same way:
@@ -342,13 +350,28 @@
           <section aria-labelledby="about">
             <h2 id="about">About</h2>
             <p class="prose">
-              I spent five years as a ship pilot, holding vessels in position
-              during offshore subsea operations. Writing PowerShell scripts to
-              automate compliance work on board is what pulled me into software.
-              I left that career to study Computer Programming at Seneca
-              Polytechnic in Toronto, where I made the President’s Honour List
-              twice. In 2026 I also mentored six new Seneca students through the
-              Peer Mentoring program.
+              I like starting from a blank page. The part I enjoy most comes
+              before the code: working out what the problem is, then deciding
+              how the system should be shaped. I’m still learning to make those
+              decisions well, and AI has made me faster at it. I ask Claude to
+              argue against my plans and explain the trade-offs I missed, then I
+              write down what I chose and why. I’ve never been good at accepting
+              “that’s just how it’s done” as an answer, and a tool that keeps
+              asking “why?” suits me.
+            </p>
+            <p class="prose">
+              Before tech, I spent five years as a ship pilot, holding vessels
+              in position during offshore subsea operations. Writing PowerShell
+              scripts to automate compliance work on board is what first got me
+              into programming. I eventually traded the offshore life for a
+              Computer Programming diploma at Seneca Polytechnic in Toronto,
+              where I made the President’s Honour List twice. In 2026 I also
+              mentored six new students through Seneca’s Peer Mentoring program.
+            </p>
+            <p class="prose">
+              Outside of work I’m usually doing CrossFit or playing video games.
+              My only problem is that my game backlog grows faster than my
+              project backlog.
             </p>
           </section>
         </main>
