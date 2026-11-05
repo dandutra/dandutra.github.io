@@ -77,6 +77,10 @@ Email is the fastest way to reach me.
 
 Email · LinkedIn · GitHub
 
+This site is hand-written HTML and CSS. Every change runs through Lighthouse, link and HTML checks in CI. Source
+
+_Below the links, in muted text. "Source" links to github.com/dandutra/dandutra.github.io._
+
 ---
 
 # resume.html
